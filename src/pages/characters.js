@@ -87,6 +87,13 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const StyledSearch = styled.button`
+  border:none;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+`
+
 function Characters() {
 
   const [offset, setOffset] = useState(0);
@@ -135,7 +142,7 @@ function Characters() {
             setOffset(0); // reset off set when the user choses a specific character so that they get characters in order
             setInputQuery(characterToSearch);
           }}>
-          <StyledIcon icon="search"/>
+          <StyledSearch type="submit"><StyledIcon icon="search"/></StyledSearch>
             <StyledInput placeholder= 'Enter a character name ' onChange={e => setCharacterToSearch(e.target.value)} /> 
           </StyledForm>
         
