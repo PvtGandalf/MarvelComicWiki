@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/MarvelComicWiki/static/css/main.61e2343e.css",
-    "main.js": "/MarvelComicWiki/static/js/main.62c2a5ad.js",
+    "main.js": "/MarvelComicWiki/static/js/main.b10ac80f.js",
     "index.html": "/MarvelComicWiki/index.html",
     "main.61e2343e.css.map": "/MarvelComicWiki/static/css/main.61e2343e.css.map",
-    "main.62c2a5ad.js.map": "/MarvelComicWiki/static/js/main.62c2a5ad.js.map"
+    "main.b10ac80f.js.map": "/MarvelComicWiki/static/js/main.b10ac80f.js.map"
   },
   "entrypoints": [
     "static/css/main.61e2343e.css",
-    "static/js/main.62c2a5ad.js"
+    "static/js/main.b10ac80f.js"
   ]
 }
