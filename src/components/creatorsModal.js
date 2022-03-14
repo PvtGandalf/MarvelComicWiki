@@ -35,8 +35,8 @@ const StyledModalTitle = styled(Modal.Title)`
 	padding-left: 20px;
 `;
 
-export default function CharacterModal(props) {
-  	return (
+export default function CreatorModal(props) {
+	return (
 		<Modal
 			{...props}
 			size="lg"
@@ -50,20 +50,9 @@ export default function CharacterModal(props) {
 					{props.name}
 				</StyledModalTitle>
 			</StyledModalHeader>
-		
+			
 			<StyledModalBody theme={props.theme}>
-			
-				<Accordion flush>
-					<StyledAccordionItem theme={props.theme} eventKey="Description">
-						<Accordion.Header>
-							<h4>Description</h4>
-						</Accordion.Header>
-						<Accordion.Body>
-							<p>{props.description}</p>
-						</Accordion.Body>
-					</StyledAccordionItem>
-				</Accordion>
-			
+
 				<Accordion flush>
 					<StyledAccordionItem theme={props.theme} eventKey="Comics">
 						<Accordion.Header><h4>Comics</h4></Accordion.Header>
@@ -80,7 +69,7 @@ export default function CharacterModal(props) {
 						</Accordion.Body>
 					</StyledAccordionItem>
 				</Accordion>
-			
+
 				<Accordion flush>
 					<StyledAccordionItem theme={props.theme} eventKey="Events">
 						<Accordion.Header><h4>Events</h4></Accordion.Header>
@@ -97,8 +86,8 @@ export default function CharacterModal(props) {
 						</Accordion.Body>
 					</StyledAccordionItem>
 				</Accordion>
-			
-				<Accordion flush>
+
+			  <Accordion flush>
 					<StyledAccordionItem theme={props.theme} eventKey="Series">
 						<Accordion.Header><h4>Series</h4></Accordion.Header>
 						<Accordion.Body>
@@ -114,13 +103,13 @@ export default function CharacterModal(props) {
 						</Accordion.Body>
 					</StyledAccordionItem>
 				</Accordion>
-		
+
 			</StyledModalBody>
-		
+			
 			<StyledModalFooter theme={props.theme}>
 				<Button onClick={props.onHide}>Close</Button>
 			</StyledModalFooter>
-		
+    
 		</Modal>
 	);
 }

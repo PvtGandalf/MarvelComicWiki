@@ -35,8 +35,8 @@ const StyledModalTitle = styled(Modal.Title)`
 	padding-left: 20px;
 `;
 
-export default function CharacterModal(props) {
-  	return (
+export default function EventModal(props) {
+  return (
 		<Modal
 			{...props}
 			size="lg"
@@ -44,26 +44,40 @@ export default function CharacterModal(props) {
 			centered
 			scrollable={true}
 		>
-		
 			<StyledModalHeader theme={props.theme} closeButton>
 				<StyledModalTitle id="contained-modal-title-vcenter">
-					{props.name}
+					{props.title}
 				</StyledModalTitle>
 			</StyledModalHeader>
-		
-			<StyledModalBody theme={props.theme}>
 			
+			<StyledModalBody theme={props.theme}>
+		
 				<Accordion flush>
 					<StyledAccordionItem theme={props.theme} eventKey="Description">
-						<Accordion.Header>
-							<h4>Description</h4>
-						</Accordion.Header>
+						<Accordion.Header><h4>Description</h4></Accordion.Header>
 						<Accordion.Body>
 							<p>{props.description}</p>
 						</Accordion.Body>
 					</StyledAccordionItem>
 				</Accordion>
-			
+				
+				<Accordion flush>
+					<StyledAccordionItem theme={props.theme} eventKey="Characters">
+						<Accordion.Header><h4>Characters</h4></Accordion.Header>
+						<Accordion.Body>
+							{(!props.characters.length) ? 
+								<p>Not Available</p>
+								:
+								<ul>
+									{props.characters.map(item => 
+										<li key={item.resourceURI}>{item.name}</li>
+									)}
+								</ul>
+							}
+						</Accordion.Body>
+					</StyledAccordionItem>
+				</Accordion>
+				
 				<Accordion flush>
 					<StyledAccordionItem theme={props.theme} eventKey="Comics">
 						<Accordion.Header><h4>Comics</h4></Accordion.Header>
@@ -80,16 +94,16 @@ export default function CharacterModal(props) {
 						</Accordion.Body>
 					</StyledAccordionItem>
 				</Accordion>
-			
+				
 				<Accordion flush>
-					<StyledAccordionItem theme={props.theme} eventKey="Events">
-						<Accordion.Header><h4>Events</h4></Accordion.Header>
+					<StyledAccordionItem theme={props.theme} eventKey="Creators">
+						<Accordion.Header><h4>Creators</h4></Accordion.Header>
 						<Accordion.Body>
-							{(!props.events.length) ? 
+							{(!props.creators.length) ? 
 								<p>Not Available</p>
 								:
 								<ul>
-									{props.events.map(item => 
+									{props.creators.map(item => 
 										<li key={item.resourceURI}>{item.name}</li>
 									)}
 								</ul>
@@ -97,7 +111,7 @@ export default function CharacterModal(props) {
 						</Accordion.Body>
 					</StyledAccordionItem>
 				</Accordion>
-			
+				
 				<Accordion flush>
 					<StyledAccordionItem theme={props.theme} eventKey="Series">
 						<Accordion.Header><h4>Series</h4></Accordion.Header>
@@ -114,13 +128,13 @@ export default function CharacterModal(props) {
 						</Accordion.Body>
 					</StyledAccordionItem>
 				</Accordion>
-		
+				
 			</StyledModalBody>
-		
+			
 			<StyledModalFooter theme={props.theme}>
 				<Button onClick={props.onHide}>Close</Button>
 			</StyledModalFooter>
-		
+			
 		</Modal>
 	);
 }

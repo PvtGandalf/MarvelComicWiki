@@ -25,7 +25,8 @@ This service retrieves data from Marvel's Developer API and provides the user wi
 - [x] Create Character Modals
 - [x] Implement Character Search by Name
 - [x] Implement Pagination for all Characters - [Demo Code](URL "https://github.com/AdeleD/react-paginate/blob/master/demo/js/demo.js") using [react-paginate](URL "https://www.npmjs.com/package/react-paginate")
-- [ ] Develop Comics Page
-- [ ] Develop Creators Page
-- [ ] Develop Events Page
-- [ ] Develop Series Page
+- [x] Develop Comics Page
+- [x] Develop Creators Page
+- [x] Develop Events Page
+- [x] Develop Series Page
+- [x] Implement Theme Toggle
